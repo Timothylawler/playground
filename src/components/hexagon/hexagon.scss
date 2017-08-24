@@ -1,0 +1,25 @@
+
+
+.hexagon {
+  width: 34px;
+  height: 60px;
+  display: inline-block;
+  background-color: #69dede;
+  position: relative;
+  &:before, &:after{
+    width: 34px;
+    height: 60px;
+    display: inline-block;
+    background-color: #69dede;
+    content: "";
+    position: absolute;
+  }
+
+  &:before{
+    transform: rotate(60deg);
+  }
+
+  &:after{
+    transform: rotate(-60deg);
+  }
+}
