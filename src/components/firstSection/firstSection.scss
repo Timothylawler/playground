@@ -1,7 +1,13 @@
 
 
 .first-section{
-  .container{
+  
+  >.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .item{
     
+    margin: 48px 0px;
   }
 }

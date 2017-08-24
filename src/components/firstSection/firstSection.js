@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import {
-  HamburgerCross
+  HamburgerCross,
+  ExpandingCircles
 } from '../';
 import './firstSection.css';
 class FirstSection extends Component {
@@ -17,10 +18,14 @@ class FirstSection extends Component {
   render() {
     return (
       <div className="first-section">
+          <h2>Playground</h2>
         <div className="container">
-          <h2>firstSection</h2>
-          
-          <HamburgerCross />
+          <div className="item">
+            <HamburgerCross />
+          </div>
+          <div className="item">
+            <ExpandingCircles />
+          </div>
         </div>
       </div>
     );

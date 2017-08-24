@@ -27,7 +27,7 @@ class HamburgerCrossComponent extends Component {
         <span className={active? "bar hide": "bar"}></span>
         <span className={active? "bar spin": "bar"}></span>
         <span className={active? "bar hide": "bar"}></span>
-        <span className={active? "bar active-cross": "bar hidden"}></span>
+        <span className={active? "bar active-cross": "bar"}></span>
       </div>
     );
   }
