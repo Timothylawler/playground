@@ -1,0 +1,48 @@
+
+
+.button-menu {
+  .wrapper{
+    position: relative;
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+  }
+
+  button{
+    -webkit-appearance: none;
+    border:none;
+    padding: 24px 48px;
+    display: relative;
+    background-color: #888;
+    &:focus, &:active{
+      outline: none;
+    }
+  }
+
+  .menu-wrapper{
+    position: absolute;
+    top: calc(-100% - 4px);
+    transform: scale(1);
+    overflow: hidden;
+    transition: transform 300ms, top 200ms;
+    ul{
+      list-style: none;
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+
+      li{
+        display: inline-block;
+        padding: 24px 24px;
+        background-color: #888;
+        color: #222;
+      }
+    }
+
+    &.hidden{
+      transform: scale(0);
+      top: -50%;
+      transition: transform 300ms, top 400ms;
+    }
+  }
+}

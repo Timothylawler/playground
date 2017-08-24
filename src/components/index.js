@@ -11,3 +11,4 @@ export { FloatingBox } from './floating-box/floating-box';
 export { Hexagon } from './hexagon/hexagon';
 export { HexagonBox } from './hexagon-box/hexagon-box';
 export { RotatingBox } from './rotating-box/rotating-box';
+export { ButtonMenu } from './button-menu/button-menu';

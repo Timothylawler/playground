@@ -7,7 +7,8 @@ import {
   ChatBox,
   FloatingBox,
   HexagonBox,
-  RotatingBox
+  RotatingBox,
+  ButtonMenu
 } from '../';
 import './firstSection.css';
 class FirstSection extends Component {
@@ -50,6 +51,10 @@ class FirstSection extends Component {
           
           <div className="item">
             <RotatingBox />
+          </div>
+
+          <div className="item">
+            <ButtonMenu />
           </div>
         </div>
       </div>
