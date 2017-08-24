@@ -1,0 +1,57 @@
+
+
+.hamburger-cross{
+  display: inline-block;
+  position: relative;
+
+  span {
+    display: block;
+    height: 5px;
+    width: 50px;
+    background-color: #eee;
+    content: "";
+    margin: 8px 0;
+    transition: transform 500ms ease-in-out, opacity 300ms linear;
+    &:nth-child(1){
+      margin-top: 0;
+      transition-delay: 150ms;
+    }
+
+    &:nth-child(2){
+    }
+
+    &:nth-child(3){
+      margin-bottom: 0;
+      transition-delay: 150ms;
+    }
+
+    &:nth-child(4){
+      position: absolute;
+      transition: none;
+      transform: rotate(135deg);
+      opacity: 0;
+      margin: 0;
+      top:calc(50% - 2px);
+    }
+
+
+    &.spin{
+      transform: rotate(405deg);
+    }
+
+    &.hide{
+      opacity: 0;
+    }
+
+    &.active-cross{
+      opacity: 1;
+      transition: opacity 300ms linear;
+      transition-delay: 250ms;
+    }
+  }
+
+
+
+
+  
+}

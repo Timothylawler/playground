@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { ApiService } from '../../utils';
+
+import {
+  HamburgerCross
+} from '../';
 import './firstSection.css';
 class FirstSection extends Component {
   constructor(props){
     super(props);
-    this.apiService = new ApiService();
+    
   }
 
   componentDidMount() {
@@ -17,6 +20,7 @@ class FirstSection extends Component {
         <div className="container">
           <h2>firstSection</h2>
           
+          <HamburgerCross />
         </div>
       </div>
     );
