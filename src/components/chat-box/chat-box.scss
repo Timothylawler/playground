@@ -1,0 +1,28 @@
+
+
+.chat-box{
+  .box{
+    width: 75%;
+    margin: auto;
+    background-color: #af9db7;
+    padding: 24px;
+    position: relative;
+    border-radius: 15px;
+    color: #dedede;
+
+    &:after{
+      position: absolute;
+      display: block;
+      content: "";
+      border-right: 15px solid transparent;
+      border-left: 15px solid transparent;
+      border-top: 30px solid #af9db7;
+      bottom: -30px;
+    }
+
+    p {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
