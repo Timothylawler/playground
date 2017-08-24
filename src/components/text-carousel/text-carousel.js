@@ -43,7 +43,7 @@ class TextCarouselComponent extends Component {
         isTextComingIn: false,
         isTextGoingAway: false
       });
-    }, 600);
+    }, 650);
   }
 
   render() {

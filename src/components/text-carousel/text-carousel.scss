@@ -3,22 +3,21 @@
 .text-carousel{
 
   h1{
+    transition: opacity 400ms, transform 400ms;
+    
     &.heading{
       opacity: 1;
-      transition: opacity 400ms, transform 400ms;
       transform: translateY(0); 
     }
 
     &.heading-incoming{
       opacity: 0;
-      transition: opacity 400ms, transform 400ms;
-      transform: translateY(125%);
+      transform: translateY(125%); 
     }
 
     &.heading-outgoing{
       opacity: 0;
-      transition: opacity 400ms, transform 400ms;
-      transform: translateY(-125%);
+      transform: translateY(-125%) ;
     }
   }
 }
