@@ -9,3 +9,4 @@ export { TextCarousel } from './text-carousel/text-carousel';
 export { ChatBox } from './chat-box/chat-box';
 export { FloatingBox } from './floating-box/floating-box';
 export { Hexagon } from './hexagon/hexagon';
+export { HexagonBox } from './hexagon-box/hexagon-box';

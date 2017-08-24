@@ -6,7 +6,7 @@ import {
   TextCarousel,
   ChatBox,
   FloatingBox,
-  Hexagon
+  HexagonBox
 } from '../';
 import './firstSection.css';
 class FirstSection extends Component {
@@ -44,7 +44,7 @@ class FirstSection extends Component {
           </div>
           
           <div className="item">
-            <Hexagon />
+            <HexagonBox />
           </div>
         </div>
       </div>

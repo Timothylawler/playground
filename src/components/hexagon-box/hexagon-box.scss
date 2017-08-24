@@ -1,0 +1,21 @@
+
+
+.hexagon-box{
+  //animation: rotate 4000ms infinite linear;
+  position:relative;
+
+  .row{
+    display: flex;
+    justify-content: center;
+  }
+
+  @keyframes rotate{
+    from{
+      transform: rotate(0deg);
+    }
+
+    to{
+      transform: rotate(360deg);
+    }
+  }
+}

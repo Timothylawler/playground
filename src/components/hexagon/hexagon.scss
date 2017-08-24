@@ -1,14 +1,14 @@
 
-
 .hexagon {
-  width: 34px;
-  height: 60px;
+  margin: 0 8.5px;
+  width: 17px;
+  height: 30px;
   display: inline-block;
   background-color: #69dede;
   position: relative;
   &:before, &:after{
-    width: 34px;
-    height: 60px;
+    width: 17px;
+    height: 30px;
     display: inline-block;
     background-color: #69dede;
     content: "";
@@ -21,5 +21,39 @@
 
   &:after{
     transform: rotate(-60deg);
+  }
+
+  &.animated{
+    
+    &.rotate {
+      margin: -1px 8px;
+      animation: expand 2000ms infinite ease-in-out;
+
+      @keyframes expand{
+        0% {
+          margin: -1px 8px;
+          top: -8.5px;
+        }
+
+        35%, 65% {
+          margin: 3.5px 13px;
+          top: -30px;
+        }
+
+        45%, 55%{
+          transform: scale(1.2);
+        }
+
+        100% {
+          margin: -1px 8px;
+          top: -8.5px;
+        }
+      }
+    }
+  }
+
+  &.rotate{
+    transform: rotate(90deg);
+    margin: -3px 8px;
   }
 }
