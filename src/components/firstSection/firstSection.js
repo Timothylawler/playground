@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 import {
   HamburgerCross,
-  ExpandingCircles
+  ExpandingCircles,
+  TextCarousel
 } from '../';
 import './firstSection.css';
 class FirstSection extends Component {
@@ -25,6 +26,10 @@ class FirstSection extends Component {
           </div>
           <div className="item">
             <ExpandingCircles />
+          </div>
+
+          <div className="item">
+            <TextCarousel />
           </div>
         </div>
       </div>
