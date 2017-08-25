@@ -9,7 +9,8 @@ import {
   HexagonBox,
   RotatingBox,
   ButtonMenu,
-  RippleButton
+  RippleButton,
+  Alert
 } from '../';
 import './firstSection.css';
 class FirstSection extends Component {
@@ -60,6 +61,10 @@ class FirstSection extends Component {
           
           <div className="item">
             <RippleButton />
+          </div>
+
+          <div className="item">
+            <Alert />
           </div>
         </div>
       </div>

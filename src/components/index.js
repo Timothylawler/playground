@@ -13,3 +13,4 @@ export { HexagonBox } from './hexagon-box/hexagon-box';
 export { RotatingBox } from './rotating-box/rotating-box';
 export { ButtonMenu } from './button-menu/button-menu';
 export { RippleButton } from './ripple-button/ripple-button';
+export { Alert } from './alert/alert';

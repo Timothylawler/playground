@@ -1,0 +1,47 @@
+
+
+.alert{
+  display: flex;
+  justify-content: center;
+
+  .alert-box{
+    width: 100px;
+    height: 100px;
+    content: "";
+    position: relative;
+    background-color: #eee;
+
+    .alert-wave{
+      position: absolute;
+      height: calc(100% - 6px);
+      width: calc(100% - 6px);
+      background-color: transparent;
+      outline: 3px solid #eee;
+      top: 3px;
+      left: 3px;
+      animation: alert-wave 1500ms infinite;
+
+      &:nth-child(2){
+        animation-delay: 400ms;
+      }
+    }
+  }
+
+  @keyframes alert-wave {
+    from{
+      width: calc(100% - 6px);
+      height: calc(100% - 6px);
+      left: 3px;
+      top: 3px;
+      opacity: 1;
+    }
+
+    to {
+      width: calc(100% - 6px + 24px);
+      height: calc(100% - 6px + 24px);
+      left: calc(3px - 12px);
+      top: calc(3px - 12px);
+      opacity: 0;
+    }
+  }
+}
