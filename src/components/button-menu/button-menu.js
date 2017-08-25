@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import './button-menu.css';
 class ButtonMenuComponent extends Component {
   state = {
-    isMenuOpen: false
+    isMenuOpen: false,
+    activeMenu: 0
   }
   constructor(props){
     super(props);
@@ -19,25 +20,47 @@ class ButtonMenuComponent extends Component {
     }))
   }
 
+  handleMenuItemClick(index){
+    this.setState({
+      activeMenu: index,
+    });
+    setTimeout(() => {
+      this.setState({
+        isMenuOpen: false
+      })
+    }, 75)
+  }
+
+  _getMenuItemClassName(index) {
+    let classname = "material-icons ";
+    if(this.state.activeMenu === index){
+      classname += "active";
+    }
+    return classname;
+  }
+
   render() {
     const {
-      isMenuOpen
+      isMenuOpen,
+      activeMenu
     } = this.state;
     return (
       <div className="button-menu">
         <div className="wrapper">
-          <button className="menu-button" onClick={this.handleMenuClick}>Menu</button>
+          <button className="menu-button" onClick={this.handleMenuClick}>
+            <i className="material-icons">{isMenuOpen? "close": "menu"}</i>
+          </button>
 
           <div className={isMenuOpen? "menu-wrapper": "menu-wrapper hidden"}>
             <ul>
-              <li>
-                item1
+              <li onClick={() => this.handleMenuItemClick(0)}>
+                <i className={this._getMenuItemClassName(0)}>home</i>
               </li>
-              <li>
-                item2
+              <li onClick={() => this.handleMenuItemClick(1)}>
+                <i className={this._getMenuItemClassName(1)}>person</i>
               </li>
-              <li>
-                item3
+              <li onClick={() => this.handleMenuItemClick(2)}>
+                <i className={this._getMenuItemClassName(2)}>search</i>
               </li>
             </ul>
           </div>
