@@ -5,8 +5,9 @@
   margin:auto;
   .box{
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: calc(20% - 24px);
+    height:0;
+    padding-bottom: calc(20% - 24px);
     margin: 0px 12px;
     animation: levitate 2000ms infinite;
 
