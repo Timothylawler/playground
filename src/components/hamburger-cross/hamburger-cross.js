@@ -15,13 +15,24 @@ class HamburgerCrossComponent extends Component {
   }
 
   onClick = (evt) => {
-    this.setState({
-      active: !this.state.active
-    })
+    if(this.props.active === undefined){
+      this.setState({
+        active: !this.state.active
+      });
+    }
+    if(this.props.onClick){
+      this.props.onClick();
+    }
   }
 
   render() {
-    const {active} = this.state;
+    let active = false;
+    if(this.props.active != undefined){
+      active = this.props.active;
+    }
+    else{
+      active = this.state.active;
+    }
     return (
       <div className="hamburger-cross" onClick={this.onClick}>
         <span className={active? "bar hide": "bar"}></span>

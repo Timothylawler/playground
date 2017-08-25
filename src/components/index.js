@@ -14,3 +14,4 @@ export { RotatingBox } from './rotating-box/rotating-box';
 export { ButtonMenu } from './button-menu/button-menu';
 export { RippleButton } from './ripple-button/ripple-button';
 export { Alert } from './alert/alert';
+export { PopoutMenu } from './popout-menu/popout-menu';
