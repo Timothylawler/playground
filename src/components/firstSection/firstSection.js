@@ -11,7 +11,8 @@ import {
   ButtonMenu,
   RippleButton,
   Alert,
-  PopoutMenu
+  PopoutMenu,
+  JumpingBalls
 } from '../';
 import './firstSection.css';
 class FirstSection extends Component {
@@ -69,6 +70,10 @@ class FirstSection extends Component {
           </div>
           <div className="item">
             <PopoutMenu />
+          </div>
+          
+          <div className="item">
+            <JumpingBalls />
           </div>
         </div>
       </div>
