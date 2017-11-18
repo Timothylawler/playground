@@ -4,8 +4,9 @@ import './index.css';
 import App from './App';
 import { Router, Route, browserHistory } from 'react-router';
 import { 
-  SecondSection, 
+  SecondSection,
 } from './components';
+import MenuAnimation from './pages/MenuAnimation/MenuAnimation'
 import registerServiceWorker from './registerServiceWorker';
 
 /*  Redux */
@@ -23,8 +24,7 @@ const Root = () => {
     <Provider store={store}>
       <Router history={browserHistory}>
         <Route path="/" component={App}>
-          <Route path="/second" component={SecondSection}/>
-          
+          <Route path="menuanimation" component={MenuAnimation}/>
         </Route>
       </Router>
     </Provider>

@@ -2,15 +2,6 @@ import React, { Component } from 'react';
 
 import './hexagon.css';
 class HexagonComponent extends Component {
-  
-  constructor(props){
-    super(props);
-  }
-
-  componentDidMount() {
-    
-  }
-
   _getClassName(){
     let classname = "hexagon ";
     if(this.props.animated){

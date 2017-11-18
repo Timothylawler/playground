@@ -8,15 +8,6 @@ class PopoutMenuComponent extends Component {
     isOpen: false,
     activeItem: 0
   }
-  constructor(props){
-    super(props);
-    this._handleHamburgerClick = this._handleHamburgerClick.bind(this);
-  }
-
-  componentDidMount() {
-    
-  }
-
   _getMenuClassName() {
     let classname = "popout ";
     if(!this.state.isOpen){
@@ -33,7 +24,7 @@ class PopoutMenuComponent extends Component {
     return classname;
   }
 
-  _handleHamburgerClick(){
+  _handleHamburgerClick = () =>{
     this.setState(prevState =>({
       isOpen: !prevState.isOpen
     }))

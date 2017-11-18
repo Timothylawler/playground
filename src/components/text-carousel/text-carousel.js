@@ -14,17 +14,15 @@ class TextCarouselComponent extends Component {
     isTextComingIn: false
   }
 
-  constructor(props){
-    super(props);
-  }
-
   componentDidMount() {
-    setInterval(() => {
-      this.changeText();
-    }, 5000);
+    this.textChangeInterval = window.setInterval(this.changeText, 4000);
   }
 
-  changeText(){
+  componentWillUnmount() {
+    window.clearInterval(this.textChangeInterval)
+  }
+
+  changeText = () =>{
     this.setState( prev => ({
       isTextGoingAway: true,
       isTextComingIn: false

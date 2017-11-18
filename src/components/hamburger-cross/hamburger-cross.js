@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 
 import './hamburger-cross.css';
 class HamburgerCrossComponent extends Component {
+  static propTypes = {
+    onClick: PropTypes.func,
+    active: PropTypes.bool,
+  }
+
+  static defaultProps = {
+    onClick: null,
+    active: undefined,
+  }
+
   state = {
     active: false
   }
-  
-  constructor(props){
-    super(props);
-  }
-
-  componentDidMount() {
-    
-  }
 
   onClick = (evt) => {
-    if(this.props.active === undefined){
+    if(!this.props.active){
       this.setState({
         active: !this.state.active
       });
@@ -26,13 +29,7 @@ class HamburgerCrossComponent extends Component {
   }
 
   render() {
-    let active = false;
-    if(this.props.active != undefined){
-      active = this.props.active;
-    }
-    else{
-      active = this.state.active;
-    }
+    let active = this.props.active !== undefined? this.props.active: this.state.active;
     return (
       <div className="hamburger-cross" onClick={this.onClick}>
         <span className={active? "bar hide": "bar"}></span>

@@ -6,13 +6,6 @@ class ButtonMenuComponent extends Component {
     isMenuOpen: false,
     activeMenu: 0
   }
-  constructor(props){
-    super(props);
-  }
-
-  componentDidMount() {
-    
-  }
 
   handleMenuClick = (evt) => {
     this.setState(prevState => ({
