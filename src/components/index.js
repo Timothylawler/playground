@@ -16,3 +16,4 @@ export { RippleButton } from './ripple-button/ripple-button';
 export { Alert } from './alert/alert';
 export { PopoutMenu } from './popout-menu/popout-menu';
 export { JumpingBalls } from './jumping-balls/jumping-balls';
+export { AnimatedStripeMenu } from './AnimatedStripeMenu/AnimatedStripeMenu'
