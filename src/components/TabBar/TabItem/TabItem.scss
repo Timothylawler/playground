@@ -1,0 +1,23 @@
+.tab-item {
+  position: relative;
+  cursor: pointer;
+
+  &:after {
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    content: '';
+    bottom: -6px;
+    left: 50%;
+    transition: width 200ms ease-in-out;
+    transform: translateX(-50%);
+  }
+
+  &:hover,
+  &--active {
+    &:after {
+      width: 100%;
+    }
+  }
+}
