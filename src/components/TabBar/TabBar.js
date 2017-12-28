@@ -13,24 +13,16 @@ export default class TabBar extends Component {
         route: PropTypes.string,
       })
     ).isRequired,
+    activeTab: PropTypes.shape(),
+    onTabItemClick: PropTypes.func,
   }
 
   constructor(props) {
     super(props)
-    if (props.items) {
-      this.state = {
-        activeItem: props.items[0],
-      }
-    }
-  }
-
-  onTabItemClick = (item) => {
-    this.setState({ activeItem: item })
   }
 
   render() {
-    const { items } = this.props
-    const { activeItem } = this.state
+    const { items, activeTab } = this.props
     return (
       <div className='tab-bar'>
         { items && items.map(item =>
@@ -39,8 +31,8 @@ export default class TabBar extends Component {
               key={`${item.title}${item.route}`}
               title={item.title}
               route={item.route}
-              onClick={() => this.onTabItemClick(item)}
-              isActive={activeItem === item}
+              onClick={() => this.props.onTabItemClick(item)}
+              isActive={activeTab === item}
             />
           )
         }

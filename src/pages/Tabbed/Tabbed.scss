@@ -1,0 +1,21 @@
+.tabbed {
+
+  .tab-content {
+    &__wrapper {
+      margin-top: 8px;
+      border: 1px solid #ccc;
+    }
+
+    &__item {
+      padding: 4px 12px;
+      transition: background-color 200ms ease-out;
+      cursor: pointer;
+      &:hover {
+        background-color: #555;
+      }
+      &__title {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
