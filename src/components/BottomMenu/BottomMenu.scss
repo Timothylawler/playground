@@ -1,0 +1,53 @@
+.BottomMenu {
+  position: fixed;
+  bottom: 0;
+  background-color: #FF5B5B;
+  width: 100%;
+  left: 0;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  transform: translateY(calc(100% - 48px));
+  transition: transform 250ms ease-out;
+
+  &--active {
+    transform: translateY(0);
+  }
+
+  &__controller {
+    padding: 16px 12px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .Button {
+      position: absolute;
+      top: -24px;
+      transform: translate(50%, -5px);
+      right: 50%;
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  &__content {
+    padding: 0 12px;
+    // display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+}
+
+.Button {
+  background-color: #fff;
+  border-radius: 50%;
+  border: 10px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:focus, &:active {
+    outline: none;
+  }
+}

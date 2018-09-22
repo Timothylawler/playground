@@ -16,6 +16,9 @@ const Navbar = () => {
           <li className='navbar-list--item'>
             <Link to='/tabbed'>Tabbed</Link>
           </li>
+          <li className='navbar-list--item'>
+            <Link to='/bottom-menu'>Bottom menu</Link>
+          </li>
         </ul>
       </div>
     </nav>
