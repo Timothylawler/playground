@@ -1,0 +1,30 @@
+.LoadingImageComponent {
+  transition: opacity 500ms ease-out;
+  border-radius: 50%;
+  position: relative;
+  z-index: 3;
+  &--exited {
+    opacity: 0.5;
+  }
+
+  &--entered {
+    opacity: 1;
+  }
+
+  &__border {
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+
+    &__spacer {
+      position: absolute;
+      z-index: 2;
+      border-radius: 50%;
+      background: #222;
+    }
+  }
+}
+
+.relative {
+  position: relative;
+}

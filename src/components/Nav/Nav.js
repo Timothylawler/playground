@@ -19,6 +19,9 @@ const Navbar = () => {
           <li className='navbar-list--item'>
             <Link to='/bottom-menu'>Bottom menu</Link>
           </li>
+          <li className='navbar-list--item'>
+            <Link to='/loading-image'>Loading image</Link>
+          </li>
         </ul>
       </div>
     </nav>
